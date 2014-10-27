@@ -31,8 +31,7 @@ Discourse::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
-  # we recommend you use mailcatcher https://github.com/sj26/mailcatcher
-  config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+  config.action_mailer.perform_deliveries = false
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
