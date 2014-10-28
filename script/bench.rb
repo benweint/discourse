@@ -254,7 +254,7 @@ begin
 
   if @result_file
     File.open(@result_file,"wb") do |f|
-      f.write(results)
+      f.write(results.to_yaml)
     end
   end
 
